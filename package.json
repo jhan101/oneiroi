@@ -1,15 +1,29 @@
 {
-  "name": "oneiroi",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "oneiroi-film-production",
+  "version": "1.0.0",
+  "description": "A modern film production company website",
+  "main": "src/main.js",
   "scripts": {
-    "build:css": "tailwindcss -i src/styles/main.css -o public/styles.css",
-    "watch:css": "tailwindcss -i src/styles/main.css -o public/styles.css --watch"
+    "start": "live-server public --port=3000 --open=/index.html",
+    "build-css": "npx tailwindcss -i ./src/styles/main.css -o ./public/css/style.css",
+    "build-css-watch": "npx tailwindcss -i ./src/styles/main.css -o ./public/css/style.css --watch",
+    "sync": "node sync-files.js",
+    "sync-watch": "node sync-files.js --watch",
+    "dev": "concurrently \"npm run build-css-watch\" \"npm run sync-watch\" \"npm start\"",
+    "build": "npm run sync && npx tailwindcss -i ./src/styles/main.css -o ./public/css/style.css --minify"
   },
+  "keywords": [
+    "film",
+    "production",
+    "website",
+    "portfolio"
+  ],
+  "author": "Oneiroi Film Production",
+  "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.4.7",
-    "postcss": "^8.4.40",
-    "autoprefixer": "^10.4.19"
+    "@tailwindcss/typography": "^0.5.9",
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.0",
+    "tailwindcss": "^3.3.0"
   }
 }

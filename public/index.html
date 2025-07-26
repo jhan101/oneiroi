@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oneiroi</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Oneiroi - Film Production Studio</title>
+    <meta
+      name="description"
+      content="Oneiroi is a professional film production company dedicated to creating cinematic works of artistic value and visual excellence."
+    />
+
+    <!-- CSS -->
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="../src/main.js"></script>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <!-- Navigation content will be injected by JavaScript -->
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app" class="pt-16">
+      <!-- Page content will be injected by JavaScript router -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white">
+      <!-- Footer content will be injected by JavaScript -->
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div
+      id="loading"
+      class="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"
+      ></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./src/main.js" type="module"></script>
   </body>
 </html>
