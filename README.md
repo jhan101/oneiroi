@@ -1,126 +1,128 @@
-# Oneiroi 電影製作工作室網站
+# Oneiroi Film Production Studio Website
 
-一個為初學專業電影製作公司設計的現代化、響應式網站。該網站具有乾淨的設計、易於導航的介面，以及為未來內容擴展而優化的架構。
+A modern, responsive website designed for an emerging professional film production company. The site features clean design, intuitive navigation, and a scalable architecture optimized for future content expansion.
 
-## ✨ 特色功能
+## ✨ Key Features
 
-- 🎬 **現代設計** - 採用 Tailwind CSS 的乾淨、專業外觀
-- 📱 **響應式設計** - 在桌面、平板和手機上都有完美的顯示效果
-- 🚀 **單頁應用** - 使用 JavaScript 路由實現快速頁面切換
-- 🎯 **易於更新** - 模組化的組件架構，便於內容管理
-- 🖼️ **媒體支援** - 為影片和圖片內容預留完整的架構
-- ♿ **無障礙設計** - 遵循現代網頁無障礙標準
-- 🎨 **動畫效果** - 流暢的頁面切換和滾動動畫
+- 🎬 **Modern Design** - Clean, professional appearance using Tailwind CSS
+- 📱 **Responsive Design** - Perfect display across desktop, tablet, and mobile devices
+- 🚀 **Single Page Application** - Fast page transitions using JavaScript routing
+- 🎯 **Easy to Update** - Modular component architecture for convenient content management
+- 🖼️ **Media Support** - Complete infrastructure ready for video and image content
+- ♿ **Accessible Design** - Follows modern web accessibility standards
+- 🎨 **Smooth Animations** - Seamless page transitions and scroll animations
 
-## 📁 專案結構
+## 📁 Project Structure
 
 ```
 oneiroi/
 ├── public/
-│   ├── index.html          # 主要 HTML 檔案
-│   └── css/               # 編譯後的 CSS 檔案
+│   ├── index.html          # Main HTML file
+│   └── css/               # Compiled CSS files
 ├── src/
-│   ├── main.js            # 主要應用程式入口
-│   ├── router.js          # 前端路由系統
-│   ├── components/        # 可重用組件
-│   │   ├── Navbar.js      # 導航欄組件
-│   │   └── Footer.js      # 頁尾組件
-│   ├── pages/             # 頁面組件
-│   │   ├── Home.js        # 首頁
-│   │   ├── About.js       # 關於我們
-│   │   ├── Feature.js     # 特色作品
-│   │   └── Archive.js     # 作品檔案
+│   ├── main.js            # Main application entry point
+│   ├── router.js          # Frontend routing system
+│   ├── components/        # Reusable components
+│   │   ├── Navbar.js      # Navigation component
+│   │   └── Footer.js      # Footer component
+│   ├── pages/             # Page components
+│   │   ├── Home.js        # Homepage
+│   │   ├── About.js       # About page
+│   │   ├── Feature.js     # Featured work page
+│   │   └── Archive.js     # Portfolio page
 │   └── styles/
-│       └── main.css       # 主要樣式檔案
-├── assets/                # 媒體資源（請自行創建）
-│   ├── images/            # 圖片檔案
-│   ├── videos/            # 影片檔案
-│   └── documents/         # 文件檔案
-├── package.json           # 專案依賴和腳本
-├── tailwind.config.js     # Tailwind CSS 配置
-└── README.md             # 專案說明
+│       └── main.css       # Main stylesheet
+├── assets/                # Media assets (create as needed)
+│   ├── images/            # Image files
+│   ├── videos/            # Video files
+│   └── documents/         # Document files
+├── sync-files.js          # File synchronization script
+├── package.json           # Project dependencies and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+└── README.md             # Project documentation
 ```
 
-## 🚀 快速開始
+## 🚀 Quick Start
 
-### 1. 安裝依賴
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2. 啟動開發伺服器
+### 2. Start Development Server
 
-使用以下命令啟動開發伺服器：
+Use the following command to start the development server:
 
 ```bash
-# 同時編譯 CSS 和啟動伺服器
+# Compile CSS, sync files, and start server concurrently
 npm run dev
 
-# 或者分別執行：
-npm run build-css  # 編譯 Tailwind CSS
-npm start         # 啟動 live-server
+# Or run individually:
+npm run build-css  # Compile Tailwind CSS
+npm run sync       # Sync source files to public directory
+npm start         # Start live-server
 ```
 
-### 3. 打開瀏覽器
+### 3. Open Browser
 
-伺服器將在 `http://localhost:3000` 啟動，瀏覽器會自動開啟。
+The server will start at `http://localhost:3000` and automatically open in your browser.
 
-## 📄 頁面說明
+## 📄 Page Overview
 
-### 首頁 (/)
+### Home (/)
 
-- 歡迎訊息和公司介紹
-- 當前項目的預告
-- 最新劇照畫廊
-- 公司理念介紹
+- Welcome message and company introduction
+- Current project teaser
+- Latest stills gallery
+- Company philosophy showcase
 
-### 關於我們 (/about)
+### About (/about)
 
-- 公司故事和背景
-- 核心價值觀
-- 服務項目介紹
-- 聯絡資訊和表單
+- Company story and background
+- Core values presentation
+- Services overview
+- Contact information and form
 
-### 特色作品 (/feature)
+### Featured Work (/feature)
 
-- 主要作品「夢境邊界」的詳細介紹
-- 幕後花絮內容
-- 劇照畫廊
-- 技術規格說明
+- Detailed showcase of main project "Boundaries of Dreams"
+- Behind-the-scenes content
+- Stills gallery
+- Technical specifications
 
-### 作品檔案 (/archive)
+### Portfolio (/archive)
 
-- 所有作品的網格展示
-- 篩選和排序功能
-- 即將推出的項目預告
+- Grid display of all works
+- Filter and sort functionality
+- Upcoming project previews
 
-## 🎨 客製化指南
+## 🎨 Customization Guide
 
-### 更新品牌資訊
+### Update Brand Information
 
-1. **公司名稱和 Logo**：編輯 `src/components/Navbar.js` 和 `src/components/Footer.js`
-2. **聯絡資訊**：更新 `src/pages/About.js` 中的聯絡詳情
-3. **專案資訊**：修改 `src/pages/Home.js` 和 `src/pages/Feature.js` 中的項目描述
+1. **Company Name and Logo**: Edit `src/components/Navbar.js` and `src/components/Footer.js`
+2. **Contact Information**: Update contact details in `src/pages/About.js`
+3. **Project Information**: Modify project descriptions in `src/pages/Home.js` and `src/pages/Feature.js`
 
-### 添加媒體內容
+### Adding Media Content
 
-#### 圖片
+#### Images
 
-1. 將圖片放置在 `assets/images/` 目錄中
-2. 在相應的組件中替換預留位置：
+1. Place images in the `assets/images/` directory
+2. Replace placeholders in corresponding components:
    ```javascript
-   // 替換預留位置
+   // Replace placeholder
    <div class="video-placeholder">
-   // 為實際圖片
-   <img src="../assets/images/your-image.jpg" alt="描述">
+   // With actual image
+   <img src="../assets/images/your-image.jpg" alt="Description">
    ```
 
-#### 影片
+#### Videos
 
-支援多種影片格式：
+Multiple video formats are supported:
 
-**YouTube 嵌入：**
+**YouTube Embed:**
 
 ```html
 <iframe
@@ -131,7 +133,7 @@ npm start         # 啟動 live-server
 </iframe>
 ```
 
-**Vimeo 嵌入：**
+**Vimeo Embed:**
 
 ```html
 <iframe
@@ -142,159 +144,190 @@ npm start         # 啟動 live-server
 </iframe>
 ```
 
-**自託管影片：**
+**Self-hosted Video:**
 
 ```html
 <video controls poster="poster.jpg">
   <source src="../assets/videos/your-video.mp4" type="video/mp4" />
-  您的瀏覽器不支援影片播放。
+  Your browser does not support video playback.
 </video>
 ```
 
-### 樣式客製化
+### Style Customization
 
-#### 顏色主題
+#### Color Theme
 
-編輯 `tailwind.config.js` 中的顏色設定：
+Edit color settings in `tailwind.config.js`:
 
 ```javascript
 colors: {
   primary: {
-    // 修改主要顏色
+    // Modify primary colors
     500: '#your-color',
     // ...
   },
   accent: {
-    // 修改強調色
+    // Modify accent colors
     500: '#your-accent-color',
     // ...
   }
 }
 ```
 
-#### 字體
+#### Fonts
 
-1. 在 `public/index.html` 中添加 Google Fonts 連結
-2. 在 `tailwind.config.js` 中更新字體設定
+1. Add Google Fonts links in `public/index.html`
+2. Update font settings in `tailwind.config.js`
 
-### 功能擴展
+### Feature Extensions
 
-#### 添加新頁面
+#### Adding New Pages
 
-1. 在 `src/pages/` 中創建新的頁面組件
-2. 在 `src/router.js` 中註冊新路由
-3. 在導航組件中添加連結
+1. Create new page component in `src/pages/`
+2. Register new route in `src/router.js`
+3. Add links in navigation components
 
-#### 整合後端 API
+#### Backend API Integration
 
-在組件中使用 `fetch` API：
+Use `fetch` API in components:
 
 ```javascript
-// 範例：提交聯絡表單
+// Example: Submit contact form
 async handleFormSubmit(formData) {
     try {
         const response = await fetch('/api/contact', {
             method: 'POST',
             body: formData
         });
-        // 處理響應
+        // Handle response
     } catch (error) {
-        console.error('提交失敗:', error);
+        console.error('Submission failed:', error);
     }
 }
 ```
 
-## 🛠️ 建置和部署
+## 🛠️ Build and Deployment
 
-### 建置用於生產環境
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-這會生成優化的 CSS 檔案在 `public/css/` 目錄中。
+This generates optimized CSS files in the `public/css/` directory.
 
-### 部署選項
+### Deployment Options
 
-#### 靜態託管（推薦）
+#### Static Hosting (Recommended)
 
-- **Netlify**: 直接連接 Git 儲存庫
-- **Vercel**: 支援自動部署
-- **GitHub Pages**: 免費靜態託管
+- **Netlify**: Direct Git repository connection
+- **Vercel**: Supports automatic deployment
+- **GitHub Pages**: Free static hosting
 
-#### 傳統主機
+#### Traditional Hosting
 
-將 `public/` 和 `src/` 目錄上傳到您的網站主機。
+Upload the `public/` and `src/` directories to your web host.
 
-## 📝 內容更新檢查清單
+## 📝 Content Update Checklist
 
-在添加實際內容之前，請檢查以下項目：
+Before adding actual content, check the following items:
 
-### 文字內容
+### Text Content
 
-- [ ] 更新公司介紹和故事
-- [ ] 修改聯絡資訊（電話、電子郵件、地址）
-- [ ] 更新專案描述和時程
-- [ ] 替換範例文字為實際內容
+- [ ] Update company introduction and story
+- [ ] Modify contact information (phone, email, address)
+- [ ] Update project descriptions and timelines
+- [ ] Replace example text with actual content
 
-### 媒體檔案
+### Media Files
 
-- [ ] 添加公司 Logo
-- [ ] 上傳專案劇照（建議 1920x1080）
-- [ ] 準備影片內容或預告片
-- [ ] 添加幕後花絮照片
+- [ ] Add company logo
+- [ ] Upload project stills (recommended 1920x1080)
+- [ ] Prepare video content or trailers
+- [ ] Add behind-the-scenes photos
 
-### SEO 和社交媒體
+### SEO and Social Media
 
-- [ ] 更新 `public/index.html` 中的 meta 標籤
-- [ ] 添加 Open Graph 標籤
-- [ ] 設定實際的社交媒體連結
-- [ ] 建立 favicon 圖示
+- [ ] Update meta tags in `public/index.html`
+- [ ] Add Open Graph tags
+- [ ] Set up actual social media links
+- [ ] Create favicon icons
 
-### 表單和互動
+### Forms and Interactions
 
-- [ ] 設定聯絡表單後端處理
-- [ ] 測試所有連結和導航
-- [ ] 檢查響應式設計在各種設備上的表現
+- [ ] Set up contact form backend processing
+- [ ] Test all links and navigation
+- [ ] Check responsive design on various devices
 
-## 🔧 故障排除
+## 🔧 Troubleshooting
 
-### 常見問題
+### Common Issues
 
-**CSS 樣式未載入**
+**CSS Styles Not Loading**
 
-- 確認已執行 `npm run build-css`
-- 檢查 `public/css/style.css` 檔案是否存在
+- Ensure `npm run build-css` has been executed
+- Check if `public/css/style.css` file exists
 
-**JavaScript 錯誤**
+**JavaScript Errors**
 
-- 開啟瀏覽器開發者工具查看錯誤訊息
-- 確認所有檔案路徑正確
+- Open browser developer tools to view error messages
+- Confirm all file paths are correct
 
-**頁面無法載入**
+**Pages Not Loading**
 
-- 檢查 `src/router.js` 中的路由設定
-- 確認頁面組件已正確匯出
+- Check route configuration in `src/router.js`
+- Ensure page components are properly exported
 
-## 📞 技術支援
+**File Synchronization Issues**
 
-如果您需要協助或有任何問題，請：
+- Run `node sync-files.js` manually
+- Check if `src/` and `assets/` directories exist in `public/`
 
-1. 查看瀏覽器開發者工具中的錯誤訊息
-2. 檢查本 README 的故障排除部分
-3. 確認所有檔案路徑和設定正確
+## 📞 Technical Support
 
-## 📄 授權
+If you need assistance or have any questions:
 
-此專案是為 Oneiroi 電影製作工作室特別設計的。請根據您的需求自由修改和使用。
+1. Check error messages in browser developer tools
+2. Review the troubleshooting section in this README
+3. Confirm all file paths and configurations are correct
+
+## 🚀 Development Workflow
+
+### File Synchronization
+
+The project uses a custom synchronization script (`sync-files.js`) to copy source files to the public directory:
+
+- **Manual sync**: `npm run sync`
+- **Watch mode**: `npm run sync-watch`
+- **Development mode**: `npm run dev` (includes auto-sync)
+
+### CSS Compilation
+
+Tailwind CSS is compiled using:
+
+- **One-time build**: `npm run build-css`
+- **Watch mode**: `npm run build-css-watch`
+
+## 📄 License
+
+This project is specifically designed for Oneiroi Film Production Studio. Feel free to modify and use according to your needs.
 
 ---
 
-**建議的下一步：**
+**Recommended Next Steps:**
 
-1. 安裝依賴並啟動開發伺服器
-2. 將範例內容替換為您的實際內容
-3. 上傳媒體檔案到 `assets/` 目錄
-4. 自定義顏色和樣式以符合品牌形象
-5. 設定聯絡表單的後端處理
-6. 測試所有功能並準備部署
+1. Install dependencies and start the development server
+2. Replace example content with your actual content
+3. Upload media files to the `assets/` directory
+4. Customize colors and styles to match your brand identity
+5. Set up backend processing for contact forms
+6. Test all functionality and prepare for deployment
+
+## 🌟 Additional Features
+
+- **Automatic file synchronization** between `src/` and `public/` directories
+- **Watch mode** for both CSS compilation and file synchronization
+- **Modular component architecture** for easy maintenance
+- **Mobile-first responsive design**
+- **Optimized for performance** with minimal JavaScript
+- **SEO-ready** with proper meta tags and semantic HTML

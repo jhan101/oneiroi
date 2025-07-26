@@ -1,105 +1,180 @@
-# 資產文件夾結構
+# Assets Directory Structure
 
-此目錄用於存放網站的媒體資源。請根據以下結構組織您的檔案：
+This directory is used to store media resources for the website. Please organize your files according to the following structure:
 
-## 📁 目錄說明
+## 📁 Directory Overview
 
-### `/images/` - 圖片檔案
+### `/images/` - Image Files
 
-存放所有圖片資源，建議的檔案格式和用途：
+Store all image resources with recommended file formats and purposes:
 
-#### 建議的圖片檔案：
+#### Recommended Image Files:
 
-- `logo.png` - 公司 Logo（透明背景，建議 200x60px）
-- `hero-bg.jpg` - 首頁英雄區塊背景圖（建議 1920x1080px）
-- `about-team.jpg` - 團隊照片
-- `feature-poster.jpg` - 主要作品海報
+- `logo.png` - Company logo (transparent background, recommended 200x60px)
+- `hero-bg.jpg` - Homepage hero section background (recommended 1920x1080px)
+- `about-team.jpg` - Team photo
+- `feature-poster.jpg` - Main project poster
 
-#### 劇照系列（建議 1920x1080px）：
+#### Stills Collection (recommended 1920x1080px):
 
 - `still-01.jpg`
 - `still-02.jpg`
 - `still-03.jpg`
-- ...（更多劇照）
+- ...(additional stills)
 
-#### 幕後花絮照片（建議 1200x800px）：
+#### Behind-the-Scenes Photos (recommended 1200x800px):
 
-- `bts-director.jpg` - 導演工作照
-- `bts-set.jpg` - 拍攝現場
-- `bts-lighting.jpg` - 燈光設置
-- `bts-team.jpg` - 團隊合照
+- `bts-director.jpg` - Director working photo
+- `bts-set.jpg` - On-set photography
+- `bts-lighting.jpg` - Lighting setup
+- `bts-team.jpg` - Team group photo
 
-### `/videos/` - 影片檔案
+### `/videos/` - Video Files
 
-存放影片資源，建議格式：
+Store video resources with recommended formats:
 
-#### 主要影片：
+#### Main Videos:
 
-- `main-trailer.mp4` - 主要預告片（建議 1080p, H.264 編碼）
-- `bts-making.mp4` - 製作花絮影片（建議 3-5 分鐘）
+- `main-trailer.mp4` - Main trailer (recommended 1080p, H.264 encoding)
+- `bts-making.mp4` - Behind-the-scenes video (recommended 3-5 minutes)
 
-#### 影片海報：
+#### Video Posters:
 
-- `main-trailer-poster.jpg` - 預告片縮圖
-- `bts-making-poster.jpg` - 花絮影片縮圖
+- `main-trailer-poster.jpg` - Trailer thumbnail
+- `bts-making-poster.jpg` - Making-of video thumbnail
 
-### `/documents/` - 文件檔案
+### `/documents/` - Document Files
 
-存放相關文件：
+Store related documents:
 
-- `press-kit.pdf` - 媒體包
-- `technical-specs.pdf` - 技術規格文件
-- `company-profile.pdf` - 公司簡介
+- `press-kit.pdf` - Media press kit
+- `technical-specs.pdf` - Technical specifications document
+- `company-profile.pdf` - Company profile
 
-## 🎯 使用建議
+## 🎯 Usage Recommendations
 
-### 圖片優化
+### Image Optimization
 
-- 使用 WebP 格式以獲得更好的壓縮效果
-- 為高解析度螢幕提供 2x 版本
-- 壓縮圖片以提高載入速度
+- Use WebP format for better compression efficiency
+- Provide 2x versions for high-resolution displays
+- Compress images to improve loading speed
 
-### 影片優化
+### Video Optimization
 
-- 使用 H.264 編碼確保廣泛相容性
-- 提供多種解析度（720p, 1080p）
-- 考慮使用 HLS 或 DASH 進行自適應串流
+- Use H.264 encoding to ensure broad compatibility
+- Provide multiple resolutions (720p, 1080p)
+- Consider using HLS or DASH for adaptive streaming
 
-### 檔案命名規範
+### File Naming Convention
 
-- 使用英文字母和數字
-- 用連字符分隔單詞（例如：`main-trailer.mp4`）
-- 避免使用空格和特殊字符
+- Use English letters and numbers
+- Separate words with hyphens (e.g., `main-trailer.mp4`)
+- Avoid spaces and special characters
 
-## 📝 替換預留位置
+## 📝 Replacing Placeholders
 
-在您的組件中，找到以下預留位置並替換為實際檔案：
+In your components, find the following placeholders and replace with actual files:
 
 ```javascript
-// 在 src/pages/Home.js 中
+// In src/pages/Home.js
 <div class="video-placeholder">
-  <!-- 替換為：-->
-  <img src="../assets/images/still-01.jpg" alt="劇照 1" />
+  <!-- Replace with: -->
+  <img src="../assets/images/still-01.jpg" alt="Still 1" />
 </div>
 
-// 在 src/pages/Feature.js 中
+// In src/pages/Feature.js
 <div class="video-placeholder">
-  <!-- 替換為：-->
+  <!-- Replace with: -->
   <video controls poster="../assets/images/main-trailer-poster.jpg">
     <source src="../assets/videos/main-trailer.mp4" type="video/mp4">
-    您的瀏覽器不支援影片播放。
+    Your browser does not support video playback.
   </video>
 </div>
 ```
 
-## 🚀 自動化工具
+## 🚀 Automation Tools
 
-考慮使用以下工具自動優化您的資產：
+Consider using the following tools to automatically optimize your assets:
 
-- **圖片壓縮**: TinyPNG, ImageOptim
-- **影片轉碼**: FFmpeg, HandBrake
-- **自動化工作流**: Gulp, Webpack
+- **Image Compression**: TinyPNG, ImageOptim
+- **Video Transcoding**: FFmpeg, HandBrake
+- **Automated Workflows**: Gulp, Webpack
+
+## 📱 Responsive Images
+
+For optimal performance across devices, consider providing multiple image sizes:
+
+```html
+<!-- Responsive image example -->
+<img
+  src="../assets/images/hero-bg.jpg"
+  srcset="
+    ../assets/images/hero-bg-small.jpg   768w,
+    ../assets/images/hero-bg-medium.jpg 1024w,
+    ../assets/images/hero-bg-large.jpg  1920w
+  "
+  sizes="100vw"
+  alt="Hero background"
+/>
+```
+
+## 🎬 Video Guidelines
+
+### Recommended Video Specifications:
+
+- **Resolution**: 1920x1080 (1080p) minimum
+- **Frame Rate**: 24fps or 30fps
+- **Bitrate**: 5-8 Mbps for 1080p
+- **Audio**: 48kHz, stereo
+- **Container**: MP4 (H.264 + AAC)
+
+### Video Poster Images:
+
+- Same aspect ratio as video
+- High-quality still frame from video
+- Compressed for web (JPEG, 80-90% quality)
+
+## 🔄 File Synchronization
+
+This project uses an automatic file synchronization system. When you add files to the `assets/` directory:
+
+1. Files are automatically copied to `public/assets/` during development
+2. Use `npm run sync` to manually synchronize files
+3. The `npm run dev` command includes automatic synchronization
+
+## 📏 Size Guidelines
+
+### Images:
+
+- **Hero images**: 1920x1080px (16:9 ratio)
+- **Thumbnails**: 400x300px (4:3 ratio)
+- **Portraits**: 800x1200px (2:3 ratio)
+- **Logos**: SVG preferred, or PNG with transparent background
+
+### Videos:
+
+- **Trailers**: Up to 100MB for web delivery
+- **Behind-the-scenes**: Up to 200MB
+- **Short clips**: 10-50MB
 
 ---
 
-**注意**: 請勿將大型媒體檔案提交到版本控制系統。考慮使用 Git LFS 或 CDN 服務來管理大型資產。
+**Note**: Avoid committing large media files to version control. Consider using Git LFS or CDN services to manage large assets efficiently.
+
+## 🌐 CDN Integration
+
+For production environments, consider using a Content Delivery Network (CDN):
+
+1. Upload assets to your CDN provider
+2. Update file paths in components to use CDN URLs
+3. Configure cache headers for optimal performance
+
+Example CDN usage:
+
+```javascript
+// Instead of local path
+src = "../assets/images/still-01.jpg";
+
+// Use CDN URL
+src = "https://cdn.yoursite.com/images/still-01.jpg";
+```
